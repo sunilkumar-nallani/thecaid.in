@@ -1,0 +1,126 @@
+.contact-form-container {
+  margin: 16px 0;
+  padding: 16px;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 4px;
+  background: rgba(0, 255, 255, 0.02);
+}
+
+.form-header {
+  margin-bottom: 16px;
+}
+
+.form-title {
+  color: #00FFFF;
+  font-size: 14px;
+  margin: 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-label {
+  color: #EAEAEA;
+  font-size: 13px;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.required {
+  color: #FF4444;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  background: rgba(234, 234, 234, 0.05);
+  border: 1px solid rgba(234, 234, 234, 0.2);
+  border-radius: 2px;
+  padding: 8px 12px;
+  color: #EAEAEA;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  border-color: #00FFFF;
+  box-shadow: 0 0 0 1px rgba(0, 255, 255, 0.3);
+}
+
+.form-input.error,
+.form-textarea.error {
+  border-color: #FF4444;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.error-message {
+  color: #FF4444;
+  font-size: 12px;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.form-actions {
+  margin-top: 8px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submit-button {
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid #00FFFF;
+  border-radius: 2px;
+  padding: 8px 16px;
+  color: #00FFFF;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover:not(:disabled) {
+  background: rgba(0, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .contact-form-container {
+    padding: 12px;
+  }
+  
+  .form-input,
+  .form-textarea,
+  .form-select {
+    font-size: 12px;
+  }
+  
+  .submit-button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
